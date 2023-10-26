@@ -37,7 +37,7 @@ const options ={
     servers:[
       {
        
-        url: 'http://localhost:4400'
+        url: 'https://klab-to-do-api.onrender.com/'
       }
     ],
     security: [
@@ -77,7 +77,7 @@ app.get("/", (req, res) => {
   res.status(200).json({
     status: "200",
     author: "Alexis Hakizimana",
-    message: "Welcome To Blog API",
+    message: "Welcome to ourAPI",
   });
 });
 
