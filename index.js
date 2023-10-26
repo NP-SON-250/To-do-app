@@ -6,8 +6,7 @@ import cors from "cors";
 import mongoose from "mongoose";
 import swaggerUi from "swagger-ui-express";
 import swaggerJSDoc from "swagger-jsdoc";
-
-import taskRoute from "./src/routes/taskRoute";
+import taskRoute from "./src/routes/taskRoute"
 
 const app = express();
 dotenv.config();
@@ -58,7 +57,6 @@ const options ={
 }
 const swaggerSpec = swaggerJSDoc(options)
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec))
-app.use('/uploads', express.static('uploads')); 
 
 // Require app to use imported configurations
 
