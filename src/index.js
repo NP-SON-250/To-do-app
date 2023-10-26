@@ -31,7 +31,7 @@ const options ={
   definition: {
     openapi : '3.0.0',
     info : {
-      title: 'Klab Blog API Node JS',
+      title: 'Klab To Do App API',
       version: '1.0.0'
     },
     servers:[
