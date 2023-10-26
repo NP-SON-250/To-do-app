@@ -6,7 +6,9 @@ import cors from "cors";
 import mongoose from "mongoose";
 import swaggerUi from "swagger-ui-express";
 import swaggerJSDoc from "swagger-jsdoc";
-import myRoute from "./src/routes/myTaskRoute";
+
+
+import taskRoute from "./routes/taskRoute";
 
 
 const app = express();
@@ -68,7 +70,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 //Routes
 
-app.use("/To/Do/API", myRoute);
+app.use("/To/Do/API", taskRoute);
 
 
 app.get("/", (req, res) => {
