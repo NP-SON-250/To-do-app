@@ -6,7 +6,8 @@ import cors from "cors";
 import mongoose from "mongoose";
 import swaggerUi from "swagger-ui-express";
 import swaggerJSDoc from "swagger-jsdoc";
-import taskRoute from "./src/routes/taskRoute"
+import myRoute from "./src/routes/taskRoute";
+
 
 const app = express();
 dotenv.config();
@@ -53,7 +54,7 @@ const options ={
     }
   },
 
-  apis: ['./src/docs/*.js'], //determination of path
+  apis: ['./src/docs/*.js'], 
 }
 const swaggerSpec = swaggerJSDoc(options)
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec))
@@ -66,7 +67,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 //Routes
-app.use("/To/Do/API", taskRoute)
+
+app.use("/To/Do/API",myRoute);
 
 
 app.get("/", (req, res) => {
